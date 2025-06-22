@@ -1,0 +1,82 @@
+
+/* Component Styles */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.apartment-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apartment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.image-slider {
+  position: relative;
+  height: 16rem;
+}
+
+@media (min-width: 768px) {
+  .image-slider {
+    height: 20rem;
+  }
+}
+
+.slider-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.slider-nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-nav-button.prev {
+  left: 0.5rem;
+}
+
+.slider-nav-button.next {
+  right: 0.5rem;
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.25rem;
+}
+
+.slider-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.slider-indicator.active {
+  background-color: white;
+}

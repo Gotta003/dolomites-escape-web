@@ -1,0 +1,64 @@
+
+/* Typography Styles */
+.font-times {
+  font-family: 'Times New Roman', serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+  }
+}
+
+.section-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}

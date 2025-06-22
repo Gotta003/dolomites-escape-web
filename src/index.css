@@ -5,6 +5,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Import custom CSS files */
+@import './styles/typography.css';
+@import './styles/layout.css';
+@import './styles/hero.css';
+@import './styles/components.css';
+@import './styles/calendar.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -45,6 +52,11 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Mountain theme colors */
+    --mountain-available: #10b981;
+    --mountain-occupied: #ef4444;
+    --mountain-unavailable: #6b7280;
   }
 
   .dark {
@@ -100,47 +112,22 @@
   }
 }
 
-.hero-bg {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-}
-
-.mountain-shadow {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-scale:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.calendar-day {
-  @apply w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-all duration-200 cursor-pointer relative;
-}
-
-.calendar-day:hover {
-  @apply scale-110;
-}
-
-.calendar-day.available {
-  @apply bg-mountain-available text-white;
-}
-
-.calendar-day.occupied {
-  @apply bg-mountain-occupied text-white;
-}
-
-.calendar-day.unavailable {
-  @apply bg-mountain-unavailable text-white;
-}
-
-.calendar-day.today {
-  @apply ring-2 ring-primary;
-}
-
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
